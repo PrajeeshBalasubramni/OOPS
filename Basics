@@ -1,14 +1,51 @@
+OOPS:
+"Object technology is at its core the combination of four ideas: a structuring method, a
+reliability discipline, an epistemological principle and a classification technique". 
+
                       OOPS
                        |
                        |
 ---Structure, reliability, epistemology and classification---
 
-"Object technology is at its core the combination of four ideas: a structuring method, a
-reliability discipline, an epistemological principle and a classification technique". 
-
+Page: 8
 
 Structure:
+  The structuring method applies to software decomposition and reuse.
+                      Structure
+                         |
+                         |
+            software decomposition and reuse
 
-The structuring method applies to software decomposition and reuse.
+  Decomposition: Process of breaking down the something complex into simpler and manageable one. 
+  Software decomposition : software decomposition is a process of beaking down the system into simpler and manageble modules or components,
+                           simplifying the design, development, testing, and maintenance of the software system. 
 
 Reliability :
+
+  what is reliability? , reliability something we can trust , that it will do what is suppose to do, without unexpected failures.
+  
+  Reliability discipline : is a approach/ablity of software system do what is suppose to do , without unexpected failures.
+
+Epistemological principle:
+
+  Its a idea of describing an object by its external feature rather than internal working and implementation.
+  
+  This principle asks a question , how do we describe a classes ?
+  
+  In object technology object is descibed by its class , what we can do with it(features).
+  
+  Example: Sort() is a class , where sort object  describes that we can do sorting activity using this class , here the internal working and implementation is 
+  not described rather its gives a general and external feature that this object do sorting.
+  
+  Abstraction , modularity , encapsulation cover these area.
+
+Classification technique:
+
+Classification technique is process of organizing and categorizing the object in a hierarchies based on their characteristics and behaviors.
+This helps in managing and structuring complex system by grouping related objects together.
+InHeritance cover these area.
+
+
+
+
+
