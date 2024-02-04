@@ -20,11 +20,15 @@ Structure:
   Software decomposition : software decomposition is a process of beaking down the system into simpler and manageble modules or components,
                            simplifying the design, development, testing, and maintenance of the software system. 
 
+Class covers here
+
 Reliability :
 
   what is reliability? , reliability something we can trust , that it will do what is suppose to do, without unexpected failures.
   
   Reliability discipline : is a approach/ablity of software system do what is suppose to do , without unexpected failures.
+
+contract covers here
 
 Epistemological principle:
 
@@ -41,9 +45,35 @@ Epistemological principle:
 
 Classification technique:
 
-Classification technique is process of organizing and categorizing the object in a hierarchies based on their characteristics and behaviors.
-This helps in managing and structuring complex system by grouping related objects together.
-InHeritance cover these area.
+  Classification technique is process of organizing and categorizing the object in a hierarchies based on their characteristics and behaviors.
+  This helps in managing and structuring complex system by grouping related objects together.
+
+  InHeritance cover these area.
+
+-------------------------------------------------------------------------------------------------
+
+
+Software Quality:
+
+ Engineering seeks quality,software engineering is the production of quality software.
+
+  We all want our software systems to be fast, reliable, easy to use, readable, modular,
+  structured and so on. But these adjectives describe two different sorts of qualities.
+
+               Software Quality
+                      |
+                      |
+        EXTERNAL AND INTERNAL FACTORS
+
+  1.User want's software to be speed , ease of use. these are called EXTERNAL factors.
+  2. Other quality's like readable, modular are INTERNAL FACTORS , these factors are cared for Software devlopers who are accessing the software code.
+  
+  In the End only External factor matters. only EXTERNAL factors are will used scale a application from user end.
+  
+  But the key to achieving these external factors is in the internal ones
+
+
+
 
 
 
