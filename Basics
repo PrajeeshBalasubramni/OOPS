@@ -1,5 +1,5 @@
 OOPS:
-"Object technology is at its core the combination of four ideas: a structuring method, a
+"Object technology is the combination of four core ideas: a structuring method, a
 reliability discipline, an epistemological principle and a classification technique". 
 
                       OOPS
@@ -71,6 +71,40 @@ Software Quality:
   In the End only External factor matters. only EXTERNAL factors are will used to scale a application from user end.
   
   But the key to achieving these external factors is in the internal ones
+
+      EXTERNAL FACTORS
+            |  
+            |
+Correctness,Robustness,Extendibility,Reusability,Compatibility,Efficiency,Portability,Ease of use,Functionality,Timeliness
+
+
+Correctness: 
+ Correctness is ability of software system that it should do perform its task. as per the system requirement.
+Robustness:
+ Robustness is a ability of software system that it should handle the unexpected/abnormal/out of scope situation.   
+  an abnormal case is simply a case that is not covered by the specification or requirement.
+Extendibility: 
+  Extendibility is ease of adapting software system to the new change in requiremnt /specification.
+  a software system should be designed with simple design and decentralised.
+Reusability:
+  Reusability is a ability of software components in many other software appliaction.
+Compatibility:
+  Compatibility is ease of combining software elements with others.
+Efficiency:
+  Efficiency is a ability of a software system . which considers processing time and space occupied.
+Portability:
+ Portability is the ease of transferring software products to various hardware
+ and software environments.
+Ease of use:
+  Ease of use is the ease with which people of various backgrounds and
+ qualifications can learn to use software products and apply them to solve
+ problems. It also covers the ease of installation, operation and monitoring. 
+Functionality:
+  Functionality is the extent of possibilities provided by a system.
+Timeliness:
+  Timeliness is the ability of a software system to be released when or before
+  its users want it
+
 
 
 
