@@ -1,3 +1,5 @@
+Chapter 1 : Goals of OOPS
+
 OOPS:
 "Object technology is the combination of four core ideas: a structuring method, a
 reliability discipline, an epistemological principle and a classification technique". 
@@ -87,7 +89,7 @@ Extendibility:
   Extendibility is ease of adapting software system to the new change in requiremnt /specification.
   a software system should be designed with simple design and decentralised.
 Reusability:
-  Reusability is a ability of software components in many other software appliaction.
+  Reusability is a ability of software components to reused in many other software appliaction.
 Compatibility:
   Compatibility is ease of combining software elements with others.
 Efficiency:
@@ -106,6 +108,29 @@ Timeliness:
   its users want it
 
 
+Documentation:
+• The need for external documentation, which enables users to understand the power
+of a system and use it conveniently, is a consequence of the definition of ease of use. 
+• The need for internal documentation, which enables software developers to
+understand the structure and implementation of a system, is a consequence of the
+extendibility requirement. 
+• The need for module interface documentation, enabling software developers to
+understand the functions provided by a module without having to understand its
+implementation, is a consequence of the reusability requirement. It also follows from
+extendibility, as module interface documentation makes it possible to determine
+whether a certain change need affect a certain module.
+
+
+Correctness and robustness -->reliability
+Extendibility and reusability--> modularity
+
+SOFTWARE MAINTENANCE
+Maintenance is what happens after a software product has been delivered.
+Discussions of software methodology tend to focus on the development phase; so do
+introductory programming courses. But it is widely estimated that 70% of the cost of
+software is devoted to maintenance.
+
+Chapter 2 : Criteria of OOPS
 
 
 
