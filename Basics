@@ -132,6 +132,32 @@ software is devoted to maintenance.
 
 Chapter 2 : Criteria of OOPS
 
+->what makes a system object-oriented?
+ 
+->criteria for assessing objectness
+
+• The use of object-oriented concepts for analysis and design only, with a method and
+notation that cannot be used to write executable software. 
+• The use of an object-oriented programming language which is not suitable for
+analysis and design. 
+
+An object-oriented language and environment, together with the supporting
+method, should apply to the entire lifecycle, in a way that minimizes the gaps
+between successive activities.
+
+Classes as modules:
+Object orientation is primarily an architectural technique: its major effect is on the
+modular structure of software systems. 
+The key role here is again played by classes. A class describes not just a type of
+objects but also a modular unit. In a pure object-oriented approach: Classes should be the only modules.
+
+Classes as types:
+Every type should be based on a class.
+
+Single inheritance:
+Software development involves a large number of classes; many are variants of others. To
+control the resulting potential complexity, we need a classification mechanism, known as
+inheritance.
 
 
 
