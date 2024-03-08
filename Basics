@@ -160,7 +160,68 @@ control the resulting potential complexity, we need a classification mechanism, 
 inheritance.
 
 
+----------------------------------The road to object orientation-------------------------
+
+Modularity:
+
+This chapter introduces a set of complementary properties: five criteria, five rules and five principles of modularity.
+
+FIVE CRITERIA
+
+A design method worthy of being called “modular” should satisfy five fundamental
+requirements, explored in the next few sections: 
+• Decomposability. 
+• Composability. 
+• Understandability. 
+• Continuity. 
+• Protection.
+
+Modular decomposability:
+
+Imagine you have a big problem to solve, like building a complicated piece of software. It's too overwhelming to tackle all at once, so you break it down into smaller, more manageable parts or "subproblems."
+However, even these smaller parts can still be pretty tricky on their own. So, you might need to break them down further into even smaller pieces. This process can repeat until each piece is simple enough to handle.
+Now, once you have these smaller pieces, you can assign different people or groups to work on them. This is like dividing up the work so that everyone can focus on their own part.
+But here's the tricky part: these smaller pieces shouldn't rely too much on each other. If they do, it could slow down the progress because one piece can't move forward until another is done.
+Also, it's really important to understand how these pieces are related to each other. If we miss any connections between them, we might end up with individual parts that work okay by themselves but don't fit together properly to solve the original big problem.
+
+So, in simple terms, the passage is basically saying that when we're solving big problems by breaking them into smaller parts, we need to make sure those parts are simple enough to handle and don't rely too much on each other. Plus, we need to understand how they all fit together in the end.
 
 
+Top-down design follows the principle of decomposability by breaking down the system into smaller,manageable parts, the inclusion of a global initialization module 
+undermines this principle by creating interdependencies between modules \and compromising their autonomy
 
+Modular composability:
+
+The concept of composability in software design, which is the opposite of decomposability.
+While decomposability focuses on breaking down complex systems into smaller subsystems, 
+composability deals with extracting existing software elements from their original context to be reused in different contexts.
+
+Composability vs. Decomposability: 
+Composability addresses the reverse process of decomposability. Instead of breaking down a complex system into smaller parts, composability involves extracting
+existing software elements from their original design context to be reused elsewhere.
+
+Composability in software design aims to make software elements independent enough to be extracted and reused in different contexts, thus promoting reusability and efficiency in development
+
+The relationship between composability and decomposability in modular design methods:
+
+1. **Independence of Composability and Decomposability**:
+   - Composability and decomposability are two separate criteria for evaluating modular design methods.
+   - They are often at odds with each other, meaning that a method that excels in one criterion may not necessarily perform well in the other.
+   - For example, top-down design, which is favored for decomposability, may not inherently support composability.
+
+2. **Top-Down Design and Decomposability**:
+   - Top-down design involves breaking down a complex system into smaller, more manageable modules or subsystems.
+   - While this approach is effective for decomposing a problem into smaller parts, the resulting modules may not be easily combinable with modules from other sources.
+   - This is because top-down design typically focuses on developing each module to fulfill a specific requirement or subproblem identified during the refinement process.
+   - As a result, these modules may be closely tied to the immediate context in which they were developed and may not be adaptable to other contexts.
+
+3. **Limitations of Top-Down Design**:
+   - Top-down design lacks mechanisms for making modules more general than immediately required or for identifying commonalities and redundancies between modules obtained from different parts of the hierarchy.
+   - It does not provide hints or incentives for designing modules with broader applicability beyond their original context.
+
+4. **Complementarity of Composability and Decomposability**:
+   - The fact that both composability and decomposability are necessary criteria for a modular method reflects the need for a balance between top-down and bottom-up reasoning.
+   - This balance acknowledges the importance of both breaking down complex problems into manageable parts (decomposability) and ensuring that these parts can be easily combined and reused in different contexts (composability).
+
+In summary, the passage highlights the challenges of achieving both composability and decomposability in modular design methods and emphasizes the complementary nature of these criteria, which reflect the balance between top-down and bottom-up reasoning in software design.
 
