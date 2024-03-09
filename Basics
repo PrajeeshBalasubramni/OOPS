@@ -358,3 +358,75 @@ by other modules, while closing it too early may lead to unexpected changes or d
 In summary, the Open Closed principle underscores the need to strike a balance between allowing for future extensibility and ensuring the stability and usability of 
 modules in a software system. It encourages developers to design modules that are flexible enough to accommodate future changes while also providing a stable and 
 well-defined interface for integration with other modules.
+
+But how can we have modules that are both open and closed? How can we keep A
+and everything in the top part of the figure unchanged, while providing A' to the bottom
+clients, and avoiding duplication of software? The object-oriented method will offer a
+particularly elegant contribution thanks to inheritance. 
+
+Yes ,inheritance solves the problem of balancing both open and closed module.
+
+To get us out of the change or redo dilemma, inheritance will allow us to
+define a new module A' in terms of an existing module A by stating the differences only.
+We will write A' as
+
+                class A' inherit
+                      A redefine f, g, … end
+                feature
+                      f …
+                      g …
+                      …
+                      u …
+                      …
+                end
+where the feature clause contains both the definition of the new features specific to A', 
+such as u, and the redefinition of those features (such as f, g, …) whose form in A' is
+different from the one they had in A. 
+
+Thanks to inheritance, O-O developers can adopt a much more incremental approach
+to software development than used to be possible with earlier methods.
+
+
+Single Choice :
+
+Certainly! Let's break down the passage into simpler terms:
+
+The passage discusses the Single Choice principle in software design, which addresses situations where a software system needs to support a set of alternatives. 
+For example, in a system managing a library, there may be different types of publications like books, journal articles, or conference proceedings.
+
+1. **Understanding the Example**:
+   - Imagine we're building a system to manage a library that handles different types of publications. We define a type called `PUBLICATION` in Pascal-Ada syntax, 
+      which has common fields like `author`, `title`, and `publication_year`, along with specific variants like `book`, `journal`, and `conference_proceedings`. 
+      Each variant has its own set of additional fields.
+
+2. **Openness and Closure**:
+   - We want modules to be open for future changes (like adding new variants), but we also need them to be closed for current usage by other modules. 
+      This means we want flexibility for future modifications while ensuring stability and usability for current integration.
+
+3. **The Issue**:
+   - The problem arises when a change, like adding a new variant to `PUBLICATION`, affects multiple client modules. For example, if we add a new type of publication 
+      like "technical reports," we must update the `PUBLICATION` type in the main module and also update all client modules that manipulate `PUBLICATION` objects.
+
+4. **The Single Choice Principle**:
+   - To address this issue, the Single Choice principle suggests that only one module in the system should know the exhaustive list of alternatives (variants). 
+      This module becomes the central point for managing changes to the list of choices.
+   - In our example, only the main module (`A`) should know the list of publication variants. If we need to add a new variant, we only update this main module (`A`).
+    Client modules (`B`, `C`, etc.) don't need to know the entire list of variants; they only need to know how to handle the variants they're designed to work with.
+
+5. **Implications and Importance**:
+   - The Single Choice principle is crucial for software evolution and maintenance. It helps prevent a chain reaction of changes across multiple modules when adding
+      or modifying variants.
+   - It also promotes a need-to-know policy, limiting the amount of information available to each module, which is essential for creating solid and reusable software
+      architectures.
+   - The principle aligns with the Open-Closed principle and serves as a strong form of Information Hiding, as it hides detailed information about variants from 
+      client modules.
+
+Once again, as the publications example shows, traditional methods do not provide
+a solution; once again, object technology will show the way, here thanks to two techniques
+connected with inheritance: polymorphism and dynamic binding. No sneak preview in
+this case, however; these techniques must be understood in the context of the full method
+
+In summary, the Single Choice principle emphasizes the importance of centralizing knowledge about alternative choices in one module to simplify software evolution
+and promote modularity. It helps manage changes effectively while maintaining a stable and flexible software system.
+
+
