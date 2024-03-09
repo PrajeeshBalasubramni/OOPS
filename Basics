@@ -74,7 +74,7 @@ Software Quality:
   
   But the key to achieving these external factors is in the internal ones
 
-      EXTERNAL FACTORS
+      INTERNAL FACTORS
             |  
             |
 Correctness,Robustness,Extendibility,Reusability,Compatibility,Efficiency,Portability,Ease of use,Functionality,Timeliness
@@ -178,17 +178,23 @@ requirements, explored in the next few sections:
 
 Modular decomposability:
 
-Imagine you have a big problem to solve, like building a complicated piece of software. It's too overwhelming to tackle all at once, so you break it down into smaller, more manageable parts or "subproblems."
-However, even these smaller parts can still be pretty tricky on their own. So, you might need to break them down further into even smaller pieces. This process can repeat until each piece is simple enough to handle.
-Now, once you have these smaller pieces, you can assign different people or groups to work on them. This is like dividing up the work so that everyone can focus on their own part.
-But here's the tricky part: these smaller pieces shouldn't rely too much on each other. If they do, it could slow down the progress because one piece can't move forward until another is done.
-Also, it's really important to understand how these pieces are related to each other. If we miss any connections between them, we might end up with individual parts that work okay by themselves but don't fit together properly to solve the original big problem.
+Imagine you have a big problem to solve, like building a complicated piece of software. It's too overwhelming to tackle all at once, so you break it down into 
+smaller, more manageable parts or "subproblems."
+However, even these smaller parts can still be pretty tricky on their own. So, you might need to break them down further into even smaller pieces. This process can
+repeat until each piece is simple enough to handle.
+Now, once you have these smaller pieces, you can assign different people or groups to work on them. This is like dividing up the work so that everyone can focus on 
+their own part.
+But here's the tricky part: these smaller pieces shouldn't rely too much on each other. If they do, it could slow down the progress because one piece can't move
+forward until another is done.
+Also, it's really important to understand how these pieces are related to each other. If we miss any connections between them, we might end up with individual parts
+that work okay by themselves but don't fit together properly to solve the original big problem.
 
-So, in simple terms, the passage is basically saying that when we're solving big problems by breaking them into smaller parts, we need to make sure those parts are simple enough to handle and don't rely too much on each other. Plus, we need to understand how they all fit together in the end.
+So, in simple terms, the passage is basically saying that when we're solving big problems by breaking them into smaller parts, we need to make sure those parts are 
+simple enough to handle and don't rely too much on each other. Plus, we need to understand how they all fit together in the end.
 
 
-Top-down design follows the principle of decomposability by breaking down the system into smaller,manageable parts, the inclusion of a global initialization module 
-undermines this principle by creating interdependencies between modules \and compromising their autonomy
+Top-down design follows is the principle of decomposability by breaking down the system into smaller,manageable parts, the inclusion of a global initialization module 
+undermines this principle by creating interdependencies between modules and compromising their autonomy
 
 Modular composability:
 
@@ -200,7 +206,8 @@ Composability vs. Decomposability:
 Composability addresses the reverse process of decomposability. Instead of breaking down a complex system into smaller parts, composability involves extracting
 existing software elements from their original design context to be reused elsewhere.
 
-Composability in software design aims to make software elements independent enough to be extracted and reused in different contexts, thus promoting reusability and efficiency in development
+Composability in software design aims to make software elements independent enough to be extracted and reused in different contexts, thus promoting reusability and
+efficiency in development
 
 The relationship between composability and decomposability in modular design methods:
 
@@ -211,17 +218,143 @@ The relationship between composability and decomposability in modular design met
 
 2. **Top-Down Design and Decomposability**:
    - Top-down design involves breaking down a complex system into smaller, more manageable modules or subsystems.
-   - While this approach is effective for decomposing a problem into smaller parts, the resulting modules may not be easily combinable with modules from other sources.
-   - This is because top-down design typically focuses on developing each module to fulfill a specific requirement or subproblem identified during the refinement process.
+   - While this approach is effective for decomposing a problem into smaller parts, the resulting modules may not be easily combinable with modules from other 
+     sources.
+   - This is because top-down design typically focuses on developing each module to fulfill a specific requirement or subproblem identified during the refinement 
+      process.
    - As a result, these modules may be closely tied to the immediate context in which they were developed and may not be adaptable to other contexts.
 
 3. **Limitations of Top-Down Design**:
-   - Top-down design lacks mechanisms for making modules more general than immediately required or for identifying commonalities and redundancies between modules obtained from different parts of the hierarchy.
+   - Top-down design lacks mechanisms for making modules more general than immediately required or for identifying commonalities and redundancies between modules 
+     obtained from different parts of the hierarchy.
    - It does not provide hints or incentives for designing modules with broader applicability beyond their original context.
 
 4. **Complementarity of Composability and Decomposability**:
-   - The fact that both composability and decomposability are necessary criteria for a modular method reflects the need for a balance between top-down and bottom-up reasoning.
-   - This balance acknowledges the importance of both breaking down complex problems into manageable parts (decomposability) and ensuring that these parts can be easily combined and reused in different contexts (composability).
+   - The fact that both composability and decomposability are necessary criteria for a modular method reflects the need for a balance between top-down and bottom-up 
+      reasoning.
+   - This balance acknowledges the importance of both breaking down complex problems into manageable parts (decomposability) and ensuring that these parts can be 
+      easily combined and reused in different contexts (composability).
 
-In summary, the passage highlights the challenges of achieving both composability and decomposability in modular design methods and emphasizes the complementary nature of these criteria, which reflect the balance between top-down and bottom-up reasoning in software design.
+In summary, the passage highlights the challenges of achie.ving both composability and decomposability in modular design methods and emphasizes the complementary 
+    nature of these criteria, which reflect the balance between top-down and bottom-up reasoning in software design.
 
+Modular Understandability:
+
+Modular Understandability refers to the ease with which a human reader can understand each module of the software without necessarily having to know about
+the other modules.Ideally, a reader should be able to understand a module in isolation or by examining only a few related modules.
+
+Modular Continuity:
+Modular Continuity is a criterion that emphasizes the importance of ensuring that small changes in problem specifications lead to proportionally small changes
+in the structure of software systems. This criterion is crucial for achieving extendibility and adaptability in software development.
+
+Modular protection:
+A method satisfies Modular Protection if it yields architectures in which the effect of an abnormal condition occurring at run time in a module will remain
+confined to that module, or at worst will only propagate to a few neighboring modules.
+
+FIVE RULES 
+From the preceding criteria, five rules follow which we must observe to ensure
+modularity: 
+• Direct Mapping. 
+• Few Interfaces. 
+• Small interfaces (weak coupling). 
+• Explicit Interfaces. 
+• Information Hiding.
+
+The first rule addresses the connection between a software system and the external
+systems with which it is connected; the next four all address a common issue — how
+modules will communicate. Obtaining good modular architectures requires that
+communication occur in a controlled and disciplined way.
+
+Direct Mapping :
+ensuring compatibility between the modular structure of a software system and the modular representation of the problem domain is essential for effectively
+addressing the needs of the problem domain, managing changes, and leveraging insights gained during problem domain analysis for software design. 
+This alignment helps achieve continuity and facilitates the modular decomposition of the software.
+
+Few Interfaces:
+
+The Few Interfaces rule restricts the overall number of communication channels between
+modules in a software architecture.Communication may occur between modules in a variety of ways. Modules may call
+each other (if they are procedures), share data structures etc. The Few Interfaces rule limits
+the number of such connections.
+
+Case (A) : way to reach the minimum number of links, n –
+1, through an extremely centralized structure: one master module; everybody else talks to
+it and to it only. 
+
+Case (C) :which has almost the same number of links. In this scheme, every module just talks to its two immediate neighbors, but there is no central authority. 
+Such a style of design is a little surprising at first, since it does not conform to the traditional model of functional, top-down design. But it can yield robust, 
+extendible architectures; this is the kind of structure that object-oriented techniques, properly applied, will tend to yield. 
+
+Small Interfaces:
+The "Small Interfaces" or "Weak Coupling" rule, which emphasizes minimizing the amount of information exchanged between modules in a software system.
+The Small Interfaces rule focuses on limiting the size of intermodule connections, meaning that when two modules communicate, they should exchange as little
+information as possible.
+
+Explicit Interfaces:
+With the fourth rule, we go one step further in enforcing a totalitarian regime upon the
+society of modules: not only do we demand that any conversation be limited to few
+participants and consist of just a few words; we also require that such conversations must
+be held in public and loudly
+
+The "Explicit Interfaces" rule emphasizes the importance of clearly documenting and making visible any communication or dependency between modules within 
+a software system. This transparency facilitates modularity by ensuring that interactions between modules are explicit and understandable, even when they 
+involve data sharing or other forms of indirect coupling.
+
+Information Hiding:
+
+Information Hiding is a crucial principle in software design that emphasizes limiting access to a module's internal details, separating specification from 
+implementation, and ensuring continuity and modularity in software systems. It focuses on defining clear interfaces between modules to facilitate 
+independent development and minimize the impact of changes.
+The primary goal of Information Hiding is to ensure continuity in software systems. By limiting changes to a module's secret elements, the public 
+interface can remain unchanged, minimizing the impact on client modules.
+
+
+FIVE PRINCIPLES
+From the preceding rules, and indirectly from the criteria, five principles of software
+construction follow: 
+• The Linguistic Modular Units principle.
+• The Self-Documentation principle.
+• The Uniform Access principle. 
+• The Open-Closed principle. 
+• The Single Choice principle. 
+
+
+Linguistic Modular Units:
+The Linguistic Modular Units principle underscores the need for a language or formalism that supports modularity at all levels of software development.
+Using such a language ensures consistency, continuity, decomposability, composability, and error protection throughout the development process.
+
+Self-Documentation:
+The designer of a module should strive to make all information about themodule part of the module itself.
+ If the software and its documentation are treated as separate entities, it is difficult to guarantee that they will remain compatible— “in sync” — when things
+start changing. Keeping everything at the same place,although not a guarantee, is a good way to help maintain this compatibility.
+
+Uniform Access principle:
+All services offered by a module should be available through a uniform
+notation, which does not betray whether they are implemented through
+storage or through computation.
+
+Open-Closed principle:
+
+The Open Closed principle in software design, which revolves around the concepts of openness and closure of modules.
+
+1. **Openness**:
+   - In software development, a module (a unit of code) is considered open if it can still be extended or modified in the future. This means that developers have the
+     flexibility to add new functionalities or make changes to the existing code without fundamentally altering its structure.
+   - Openness is important because it allows developers to adapt the module to accommodate future requirements or changes in the software system.
+
+2. **Closure**:
+   - Conversely, a module is considered closed when it's available for use by other modules in the system. This means that the module has a stable and well-defined 
+    interface, making it suitable for integration with other parts of the software.
+   - Closure involves finalizing the module's design, compiling it into executable code, and making it available for use by other modules.
+
+The passage highlights the conflicting nature of these two goals:
+
+- **Openness**: Developers want modules to remain open so they can easily make changes or extend their functionalities as needed.
+- **Closure**: Project managers want modules to be closed so that other developers can start using them without waiting indefinitely for further modifications.
+
+The passage emphasizes that achieving both openness and closure simultaneously can be challenging. Keeping a module open for future changes may delay its usability 
+by other modules, while closing it too early may lead to unexpected changes or dependencies in other parts of the system if modifications are later required.
+
+In summary, the Open Closed principle underscores the need to strike a balance between allowing for future extensibility and ensuring the stability and usability of 
+modules in a software system. It encourages developers to design modules that are flexible enough to accommodate future changes while also providing a stable and 
+well-defined interface for integration with other modules.
